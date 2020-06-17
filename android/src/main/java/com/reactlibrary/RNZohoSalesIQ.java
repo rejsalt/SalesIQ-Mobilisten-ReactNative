@@ -207,8 +207,13 @@ public class RNZohoSalesIQ extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void startChat(String question) {
-    ZohoSalesIQ.Visitor.startChat(question);
+  public void startChat(final String question) {
+    Handler handler = new Handler(Looper.getMainLooper());
+    handler.post(new Runnable() {
+      public void run() {
+        ZohoSalesIQ.Visitor.startChat(question);
+      }
+    });
   }
 
   @ReactMethod
