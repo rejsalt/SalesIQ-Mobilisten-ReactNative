@@ -31,7 +31,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
-    implementation 'com.zoho.salesiq:mobilisten:1.5-beta.4.7'
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'com.zoho.salesiq:mobilisten:2.0'
 }
   
